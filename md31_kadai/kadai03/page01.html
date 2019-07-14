@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>香辛料図鑑 | 詳細ページ</title>
+	<link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/sanitize.css">
+	<link rel="stylesheet" href="./css/style-pc.css">
+	<link rel="stylesheet" href="./css/style-tb.css" media="only screen and (min-width:660px) and (max-width:960px)">
+	<link rel="stylesheet" href="./css/style-sp.css" media="only screen and (max-width:660px)">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header_top">
+			<div class="header_title">
+				<h1><a href="index.html">香辛料図鑑</a></h1>
+			</div>
+
+			<div id="navToggle">
+				<div>
+					&nbsp;<span></span>
+					&nbsp;<span></span>
+					&nbsp;<span></span>
+				</div>
+			</div>
+
+			<nav class="navigation_main">
+				<ul>
+					<li><a href="./page01.html">カテゴリ</a></li>
+					<li><a href="./page01.html">お知らせ</a></li>
+					<li><a href="./page01.html">サイトについて</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="main_top">
+			<div class="main_title">
+				<h2>干七星椒</h2>
+			</div>
+
+			<div class="content_wrapper">
+				<article class="main_article">
+					<div class="article_img">
+						<img src="./images/spicy_idx01.jpg" alt="干七星椒の画像">
+					</div>
+
+					<h3>名称</h3>
+					<p>「唐辛子」の漢字は、「唐から伝わった辛子」の意味であるが、歴史的に、この「唐」は漠然と「外国」を指す語とされる（実際の伝来経路については伝来史で）。同様に南蛮辛子（なんばんがらし）、それを略した南蛮という呼び方もある。唐辛子の総称として鷹の爪を使う者もいるが、正確には「鷹の爪」はトウガラシ種の1品種である。
+					</p>
+
+					<h3>用途</h3>
+					<p>ビタミンAとビタミンCが豊富なことから、夏バテの防止に効果が高く、特に暑い地域で多く使われている。除虫の効果もあり、園芸では他の作物と共に植えて虫害を減らす目的で栽培されたり、食物の保存に利用される事もあるが、サルモネラ菌や大腸菌などの食中毒の原因菌を殺菌する作用は無く、食中毒を防ぐことは出来ない。
+					</p>
+				</article>
+
+				<aside class="sidebar">
+					<h3>料理サンプル</h3>
+
+					<div class="card_box">
+						<div class="card_img"><img src="./images/dishes_01.jpg" alt="唐辛子料理の画像1"></div>
+						<div class="card_img"><img src="./images/dishes_02.jpg" alt="唐辛子料理の画像2"></div>
+						<div class="card_img"><img src="./images/dishes_03.jpg" alt="唐辛子料理の画像3"></div>
+						<div class="card_img"><img src="./images/dishes_04.jpg" alt="唐辛子料理の画像4"></div>
+						<div class="card_img"><img src="./images/dishes_05.jpg" alt="唐辛子料理の画像5"></div>
+						<div class="card_img"><img src="./images/dishes_06.jpg" alt="唐辛子料理の画像6"></div>
+						<div class="card_img"><img src="./images/dishes_07.jpg" alt="唐辛子料理の画像7"></div>
+						<div class="card_img"><img src="./images/dishes_08.jpg" alt="唐辛子料理の画像8"></div>
+						<div class="card_img"><img src="./images/dishes_09.jpg" alt="唐辛子料理の画像9"></div>
+						<div class="card_img"><img src="./images/dishes_10.jpg" alt="唐辛子料理の画像10"></div>
+					</div>
+				</aside>
+			</div>
+		</main>
+
+		<footer class="footer_top">
+			<small class="footer_copyright">&copy;香辛料図鑑&nbsp;2001-2019</small>
+		</footer>
+
+		<script src="./js/jquery-3.4.0.min.js"></script>
+		<script type="text/javascript">
+
+			//トグルメニュー
+			$(function () {
+				$('#navToggle').click(function () {
+					$('body').toggleClass('openNav');
+				});
+			});
+		</script>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/* グローバル設定 */
+
+html {
+	font-size: 100%;	/* =16px */
+}
+
+body {
+	min-width: 320px;
+	color: #333;
+	background-color: #333;
+	font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+img {
+	max-width: 100%;	/* 画像最大幅 */
+	height: auto;
+}
+
+h2 {
+	margin-bottom: 1em;
+	font-size: 1.5em;	/* 24px */
+	font-weight: normal;
+	color: #e62f8b;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.75;
+}
+
+/* ナビゲーションをヘッダー画像に重ねない方法 */
+/* .clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+} */
+
+/* 外枠設定 */
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+/* ナビゲーション */
+.nav_main {
+	background-color: #333;
+}
+.nav_main ul {
+	margin: 0;
+	padding: 0;
+}
+.nav_main ul li {
+	float: left;
+	width: 25%;
+	padding: 10px 0;
+	letter-spacing: 0.1em;
+	text-align: center;
+	text-shadow: 2px 2px 2px #000;
+}
+.nav_main ul li a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+.nav_main ul li a:hover {
+	color: #aaa;
+}
+
+/* ヘッダー */
+.header_top {
+	margin-top: 0;
+	width: auto;
+	height: 640px;
+	color: #444;
+	background-image: url("../images/header.jpg");
+	background-repeat: no-repeat;
+}
+.header_top h1 {
+	visibility: hidden;
+	margin: 0;
+}
+
+/* メインコンテンツ */
+.main_top {
+	width: auto;
+	height: auto;
+	margin: 20px auto 80px;
+}
+.article_top {
+	padding: 40px 80px 0px;
+}
+
+/* フッター */
+.footer_top {
+	border-top: solid 1px #eee;
+	width: 960px;
+	height: 200px;
+	/* 上下左右真ん中設定 */
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}

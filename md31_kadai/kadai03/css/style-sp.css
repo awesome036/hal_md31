@@ -1,0 +1,53 @@
+/* 基本レイアウト */
+.html {
+	font-size: 14px;
+}
+
+.header_title {
+	width: 100%;
+}
+.header_title h1 {
+	text-align: center;
+}
+
+/* コンテンツ */
+.main_title h2 {
+	min-width: 400px;
+	padding: 0 2px;
+}
+
+.main_content {
+	justify-content: space-around;
+}
+.main_content dl {
+	width: 340px;
+	height: 100px;
+	margin-bottom: 40px;
+}
+
+/* 詳細ページ */
+.content_wrapper {
+	min-width: 380px;
+	display: block;
+	padding: 20px;
+}
+.main_article,
+.sidebar {
+	width: 100%;
+}
+
+.card_box {
+	justify-content: space-around;
+}
+
+.card_img {
+	width: 200px;
+	height: 200px;
+}
+
+@media screen and (max-width: 520px) {
+	.card_img {
+		width: 150px;
+		height: 150px;
+	}
+}

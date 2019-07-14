@@ -1,0 +1,44 @@
+/* 基本レイアウト */
+.html {
+	font-size: 15px;
+}
+
+/* コンテンツ */
+.main_title h2 {
+	min-width: 500px;
+}
+
+.main_content {
+	justify-content: space-around;
+}
+.main_content dl {
+	width: 300px;
+	height: 100px;
+	margin-bottom: 40px;
+}
+
+/* 詳細ページ */
+.content_wrapper {
+	display: block;
+	padding: 20px;
+}
+.main_article,
+.sidebar {
+	width: 100%;
+}
+
+.card_box {
+	justify-content: space-around;
+}
+
+.card_img {
+	width: 220px;
+	height: 220px;
+}
+
+@media screen and (max-width: 780px) {
+	.card_img {
+		width: 180px;
+		height: 180px;
+	}
+}

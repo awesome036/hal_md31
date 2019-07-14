@@ -1,0 +1,249 @@
+/* 基本レイアウト */
+* {
+	color: #707070;
+	font-family: "STKaiti","HGP行書体","ヒラギノ明朝 Pro W3","ＭＳ Ｐ明朝","Hiragino Mincho Pro",serif;
+}
+*::selection {
+	background: rgba(231,0,0,0.1);
+	color: #E70000;
+}
+
+.html {
+	font-size: 16px;
+}
+
+.wrapper {
+	max-width: 920px;
+	min-width: 380px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.header_top {
+	display: flex;
+	margin: 60px 0;
+	justify-content: space-between;
+}
+.header_title {
+	min-width: 440px;
+}
+.header_title h1 a {
+	font-size: 2.25rem;
+	-webkit-text-stroke: 1px #717171;
+	text-shadow: 0 0 2px #E70000;
+	color: #E70000;
+}
+.header_title h1 a:visited {
+	color:#E70000;
+}
+
+/* ナビゲーション */
+.navigation_main {
+	min-width: 440px;
+	font-size: 1.875rem;
+}
+.navigation_main ul {
+	display: flex;
+	justify-content: flex-end;
+}
+.navigation_main ul li {
+	margin-left: 20px;
+	transition: ease-in-out .1s;
+}
+.navigation_main ul li a:hover {
+	color: #fff;
+	text-shadow: 0 0 2px #E70000;
+}
+
+/* コンテンツ */
+.main_top {
+	position: relative;
+	padding-top: 60px;
+	border-top: solid 1px #717171;
+	border-bottom: solid 1px #717171;
+}
+.main_title h2 {
+	display: inline-block;
+	position: absolute;
+	min-width: 600px;
+	padding: 0 20px;
+	top: -25px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	font-size: 1.875rem;
+	background-color: #fff;
+}
+
+.main_content {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.main_content a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.main_content dl {
+	position: relative;
+	width: 280px;
+	height: 100px;
+	margin-bottom: 40px;
+	box-shadow: 0 0 5px #ccc;
+	cursor: pointer;
+	transition: ease-in-out .1s;
+}
+.main_content dl:hover {
+	box-shadow: 0 0 10px #717171;
+	transform: scale(1.05);
+	z-index: 9;
+}
+.main_content dl img {
+	width: 100px;
+	height: 100px;
+	box-shadow: 0 0 5px #ccc;
+}
+.main_content dl dt,
+.main_content dl dd {
+	position: absolute;
+	left: 120px;
+}
+.main_content dl dt {
+	top: 0;
+	font-size: 1.5rem;
+}
+.main_content dl dd {
+	top: 36px;
+	font-size: 1rem;
+}
+
+
+/* フッター */
+.footer_top {
+	padding: 40px;
+	text-align: center;
+}
+.footer_copyright {
+	font-size: 1.5rem;
+}
+
+/* 詳細ページ */
+.content_wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+.content_wrapper h3 {
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+.main_article {
+	width: 380px;
+}
+.main_article p {
+	margin-bottom: 60px;
+}
+
+.article_img {
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+.sidebar {
+	width: 380px;
+	margin-bottom: 40px;
+}
+
+.card_box {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.card_img {
+	width: 180px;
+	height: 180px;
+	margin-bottom: 20px;
+	text-align: center;
+	overflow: hidden;
+}
+.card_img img {
+	height: 100%;
+}
+
+/* トグルボタン */
+@media screen and (max-width: 960px) {
+	#navToggle {
+		/* display: none; */
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		width: 30px;
+		height: 25px;
+		cursor: pointer;
+	}
+	#navToggle div {
+		position: relative;
+	}
+	#navToggle span {
+		display: block;
+		position: absolute;
+		width: 100%;
+		border-bottom: solid 3px #717171;
+		transition: .35s ease-in-out;
+	}
+	#navToggle span:nth-child(1) {
+		top: 0;
+	}
+	#navToggle span:nth-child(2) {
+		top: 11px;
+	}
+	#navToggle span:nth-child(3) {
+		top: 22px;
+	}
+
+	.navigation_main {
+		position: absolute;
+		right: 0;
+		top: -300px;	/* 通常はビュー外 */
+		width: 100vw;
+		transition: .5s ease-in-out;
+		text-align: center;
+	}
+	.navigation_main ul {
+		margin: 0;
+		flex-direction: column;
+	}
+	.navigation_main ul li {
+		clear: both;
+		line-height: 2;
+	}
+	.navigation_main ul li a {
+		display: block;
+	}
+	
+	#navToggle {
+		display: block;
+	}
+
+	.openNav {
+		position: fixed;
+	}
+	.openNav nav {
+		height: 100vh;
+		background: rgba(255,255,255, 0.8);
+		transform: translateY(351px);
+		opacity: 1;
+		z-index: 9999;
+	}
+	.openNav #navToggle span:nth-child(1) {
+		top: 11px;
+		transform: rotate(-405deg);
+	}
+	.openNav #navToggle span:nth-child(2),
+	.openNav #navToggle span:nth-child(3) {
+		top: 11px;
+		transform: rotate(405deg);
+	}
+}

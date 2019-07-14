@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		body {
+			background-color: #59b9c6;
+			color: #ffffca;
+		}
+
+		h1 {
+			color: #ffffca;
+		}
+
+		.contents {
+			padding: 20px;
+			margin: 40px;
+			border: solid 2px #ffffca;
+			border-radius: 20px;
+		}
+
+		/* スマホサイズ */
+		@media screen and (max-width: 599px) {
+			.sp {
+				color: #59b9c6;
+				background-color: #ffffca;
+				font-weight: bold;
+			}
+		}
+
+		/* タブレットサイズ */
+		@media screen and (min-width: 600px) and (max-width: 979px) {
+			.tb {
+				color: #59b9c6;
+				background-color: #ffffca;
+				font-weight: bold;
+			}
+		}
+
+		/* PCサイズ */
+		@media screen and (min-width: 980px) {
+			.pc {
+				color: #59b9c6;
+				background-color: #ffffca;
+				font-weight: bold;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<h1>メディアクエリーの実装</h1>
+	<div class="contents pc">980px以上・PCサイズ</div>
+	<div class="contents tb">600px~979px・タブレットサイズ</div>
+	<div class="contents sp">599px以下・スマートフォンサイズ</div>
+
+</body>
+
+</html>
