@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+
+/* 基本レイアウト */
+.wrapper {
+	width: 320px;
+}
+/* コンテンツ */
+.main_area {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+  justify-content: space-between;
+}
+.section_top_page {
+	width: 140px;
+ 	height: 220px;
+	margin-bottom: 10px; /* 追加 */
+}
+.section_top_page img {
+	width: 140px;
+}
+.section_top_page h2 {
+	font-size: 14px;
+}
+.section_top_page p {
+	font-size: 12px; /* 変更 */
+}
+/* サイト名 */
+.title {
+}
+
+/* ナビゲーションメニュー */
+.navigation_main {
+	font-size: 16px;
+	padding-top: 6px;
+}
+.navigation_main ul {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+}
+.navigation_main ul li a {
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+/* ヘッダー */
+.main_visual {
+ overflow: hidden;
+ width: 320px;
+ height: 125px; /* 追加 */
+ margin-bottom: 20px; /* 追加 */
+}
+.main_visual img {
+	float: none;
+	width: 320px;
+}
+/* フッター */
+.navigation_footer li:nth-child(5n) {
+	float: none;
+	display: block;
+}
+
+/***** サブページ用 *****/
+.main_visual_second_page {
+	width: 300px;
+}
+.main_visual_second_page img{
+	width: 300px;
+}
+.content_second_page {
+	width: 320px;
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.content_second_page p {
+	clear: both;
+	margin-right: 0;
+}
+.content_second_page img {
+	width:320px;
+	height:320px;
+}
+.content_img {
+ order: 1;
+ width: 320px;
+}
+.content_text {
+ order: 2;
+ width: 320px;
+}
+
+
+/*drawerMenu.css
+******************************/
+/* Toggle(Button) */
+#navToggle {
+	display: none;
+	position: absolute;/*to body*/
+	right: 20px;
+	top: 20px;
+	width: 30px;
+	height: 25px;
+	cursor: pointer
+}
+#navToggle div {
+	position: relative
+}
+#navToggle span {
+	display: block;
+	position: absolute;/*to div*/
+	width: 100%;
+	border-bottom: solid 3px #86b12e;
+	transition: .35s ease-in-out;
+}
+#navToggle span:nth-child(1) {
+	top: 0;
+}
+#navToggle span:nth-child(2) {
+	top: 11px;
+}
+#navToggle span:nth-child(3) {
+	top: 22px;
+}
+
+/*Media-queries_____________________________________*/
+.navigation_main {
+	position: absolute;
+	right: 0;
+	top: -300px; /*通常時はビュー外*/
+	background: rgba(255,255,255,.7);
+	width: 50%;
+	transition: .5s ease-in-out;
+	text-align: left;
+}
+.navigation_main ul {
+	margin: 0
+}
+.navigation_main ul li {
+	clear:both;
+	margin: 0;
+	line-height: 2;
+}
+.navigation_main ul li a {
+	display: block;
+}
+
+/* Toggle(Button) */
+#navToggle {
+	display: block;
+}
+
+/* Click Toggle(Button) */
+.openNav #navToggle span:nth-child(1) {
+	top: 11px;
+	transform: rotate(-45deg);
+}
+.openNav #navToggle span:nth-child(2), .openNav #navToggle span:nth-child(3) {
+	top: 11px;
+	transform: rotate(45deg);
+}
+/*header menu*/
+.openNav nav {
+	transform: translateY(351px);
+}
