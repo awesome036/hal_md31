@@ -1,0 +1,293 @@
+/*######################################################################
+		Reset CSS
+************************************************************************/
+/*
+html5doctor.com Reset Stylesheet
+v1.4.1
+2010-03-01
+Author: Richard Clark - http://richclarkdesign.com
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	list-style:none;
+}
+
+
+/*
+////////////////////////////////////////////////////////////////////////
+	◆ General
+------------------------------------------------------------------------
+*/
+
+* {
+	box-sizing: border-box;
+	transition: .4s margin ease-out;
+}
+
+html {
+	font-size: 62.5%; /* 10px = 1rem */
+}
+
+body {
+	color: #333;
+	font-family: "MyYuGothic-M", "YuGothic", "-apple-system", "blinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+	font-weight: 500;
+	text-align: justify;
+	line-height: 1.75;
+}
+
+
+/* -------
+	Link Style
+------- */
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #333;
+	transition: 0.1s ease;
+}
+
+/* -------
+	Navigation
+------- */
+.navigation {
+	margin-bottom: -2rem;
+}
+@media screen and (max-width: 768px){
+	.navigation {
+		margin-bottom: 1rem;
+	}
+}
+/* -------
+	Section
+------- */
+
+.section {
+	margin: 0 0 7rem;
+	padding: 5rem 0;
+	border-bottom: 1px dashed #dcdcdc;
+}
+
+.section-area {
+	margin: 0 auto;
+	width: 960px;
+}
+
+@media screen and (max-width: 960px){
+	.section-area {
+		width: 100%;
+	}
+}
+
+.section-title {
+	margin: 0 0 5rem;
+	font-size: 2.0rem;
+	text-align: center;
+}
+
+
+/*
+////////////////////////////////////////////////////////////////////////
+	◆ Contents
+------------------------------------------------------------------------
+*/
+
+/* wrapper部分 */
+.contents-wrapper {
+	font-size: 1.6rem;
+}
+
+/* header部分 */
+.section-header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 0 .5rem;
+}
+
+.section-header h1 {
+	margin-right: auto;
+	font-size: 4rem;
+}
+
+.section-header ul {
+	display: flex;
+}
+
+.section-header li {
+	margin-left: 3rem;
+}
+
+@media screen and (max-width: 768px){
+	.section-header {
+		flex-direction: column;
+	}
+
+	.section-header h1 {
+		margin: 0 auto 3rem;
+	}
+
+	.section-header li {
+		margin: 0 1rem;
+	}
+}
+
+@media screen and (max-width: 568px){
+	.section-header li {
+		margin: 0 .5rem;
+		font-size: 1.2rem;
+	}
+}
+
+
+/* contents */
+
+.contents-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.contents-box1 {
+	margin-bottom: 3rem;
+	width: 100%;
+	background-color: #fff;
+}
+
+.contents-box1 img {
+	display: block;
+	margin-bottom: 3rem;
+	width: 100%;
+	height: auto;
+}
+
+.contents-box2 {
+	margin-bottom: 3rem;
+	padding: 3rem;
+	width: 49%;
+	background-color: #f0f0f0;
+}
+
+.contents-box2 img,
+.contents-box3 img {
+	display: block;
+	margin-bottom: 3rem;
+	width: 100%;
+	height: auto;
+}
+
+.contents-box2 h2,
+.contents-box3 h2 {
+	margin-bottom: 2rem;
+	font-size: 2.2rem;
+	text-align: center;
+}
+
+.contents-box3 {
+	margin-bottom: 3rem;
+	padding: 3rem;
+	width: 32%;
+	background-color: #f0f0f0;
+}
+
+@media screen and (max-width: 980px){
+	.contents-box3 {
+		width: 49%;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.contents-wrap {
+		flex-direction: column;
+	}
+
+	.contents-box2,
+	.contents-box3 {
+		width: 100%;
+	}
+}
+
+.contents-wrap-section {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 7rem;
+}
+.contents-wrap-section:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+
+.contents-text {
+	width: 60%; /*flex: 2;*/
+}
+.contents-img {
+	width: 35%; /*flex: 1;*/
+}
+
+.contents-text h2 {
+	margin-bottom: 2rem;
+	font-size: 2.2rem;
+}
+
+.contents-img img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+@media screen and (max-width: 768px){
+	.contents-wrap-section,
+	.contents-wrap-section:nth-child(odd)  {
+		flex-direction: column;
+	}
+
+	.contents-text,
+	.contents-img {
+		width: 100%; /*flex: 1;*/
+	}
+
+	.contents-text {
+		padding: 3rem;
+	}
+
+	.contents-text h2 {
+		text-align: center;
+	}
+}
+
+
+/*
+////////////////////////////////////////////////////////////////////////
+	◆ Footer
+------------------------------------------------------------------------
+*/
+
+.footer {
+	padding: 0 0 3em;
+}
+
+.copyright {
+	font-size: 1.2rem;
+	text-align: center;
+}
