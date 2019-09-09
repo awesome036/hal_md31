@@ -100,6 +100,12 @@ a:hover {
 	}
 }
 
+.section-title {
+	margin-bottom: 5rem;
+	font-size: 2.0rem;
+	text-align: center;
+}
+
 /*
 ////////////////////////////////////////////////////////////////////////
 	◆ Contents
@@ -150,6 +156,11 @@ a:hover {
 }
 
 /* contents部分 */
+.contents-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
 .contents-box1 {
 	margin-bottom: 3rem;
 	width: 100%;
@@ -160,6 +171,45 @@ a:hover {
 	width: 100%;
 	height: auto;
 }
+
+.contents-box2 {
+	margin-bottom: 3rem;
+	padding: 3rem;
+	width: 49%;
+	background-color: #f0f0f0;
+}
+.contents-box2 img,
+.contents-box3 img {
+	display: block;
+	margin-bottom: 3rem;
+	width: 100%;
+	height: auto;
+}
+.contents-box2 h2,
+.contents-box3 h2 {
+	margin-bottom: 2rem;
+	font-size: 2.2rem;
+	text-align: center;
+}
+
+.contents-box3 {
+	margin-bottom: 3rem;
+	padding: 3rem;
+	width: 32%;
+	background-color: #f0f0f0;
+}
+
+@media screen and (max-width: 768px) {
+	.contents-wrap {
+		flex-direction: column;
+	}
+
+	.contents-box2,
+	.contents-box3 {
+		width: 100%;
+	}
+}
+
 
 /*
 ////////////////////////////////////////////////////////////////////////
